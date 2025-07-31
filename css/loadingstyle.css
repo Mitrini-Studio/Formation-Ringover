@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: white; /* Just a light background color */
+}
+
+.container {
+    text-align: center;
+}
+
+.loading-gif {
+    width: 300px;
+    height: 300px;
+}

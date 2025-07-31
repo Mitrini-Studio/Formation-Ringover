@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RingOver - Auth</title>
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <link rel="icon" type="image/png" href="images/png/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="header-bar">
+            <div class="logo">
+                <img src="images/png/logo.png" alt="Logo de la plateforme de formation">
+            </div>
+            <div class="language-selector">
+                <img src="images/svg/FR.svg" alt="Français" class="flag-icon active" data-lang="fr">
+                <img src="images/svg/GB.svg" alt="Anglais" class="flag-icon" data-lang="en">
+                <img src="images/svg/ES.svg" alt="Espagnol" class="flag-icon" data-lang="es">
+            </div>
+        </div>
+
+        <div class="login-box">
+            <h2 data-key="login_title">Connexion</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email" data-key="email_label">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group password-group">
+                    <div class="password-label-row">
+                        <label for="password" data-key="password_label">Mot de passe</label>
+                        <a href="#" class="forgot-password" id="forgotPasswordLink" data-key="forgot_password">Mot de passe oublié ?</a>
+                    </div>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="password" name="password" required>
+                        <span class="toggle-password" id="togglePasswordText" data-key="show_password">VOIR</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-button" data-key="login_button">Connexion</button>
+            </form>
+
+            <p class="sso-title" data-key="sso_title">Utiliser le SSO</p>
+
+            <div class="separator">
+                <span data-key="or_text">or</span>
+            </div>
+
+            <div class="sso-options">
+                <button class="sso-button" id="appleLogin">
+                    <img src="images/png/apple.png" alt="Apple Logo" class="sso-logo">
+                    <span data-key="continue_apple">Continuer avec Apple</span>
+                </button>
+                <button class="sso-button" id="facebookLogin">
+                    <img src="images/png/facebook.png" alt="Facebook Logo" class="sso-logo">
+                    <span data-key="continue_facebook">Continuer avec Facebook</span>
+                </button>
+                <button class="sso-button" id="googleLogin">
+                    <img src="images/png/google.png" alt="Google Logo" class="sso-logo">
+                    <span data-key="continue_google">Continuer avec Google</span>
+                </button>
+                <button class="sso-button" id="microsoftLogin">
+                    <img src="images/png/microsoft.png" alt="Microsoft Logo" class="sso-logo">
+                    <span data-key="continue_microsoft">Continuer avec Microsoft</span>
+                </button>
+                <button class="sso-button" id="linkedinLogin">
+                    <img src="images/png/linkedin.png" alt="LinkedIn Logo" class="sso-logo">
+                    <span data-key="continue_linkedin">Continuer avec LinkedIn</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="#" class="privacy-policy" data-key="privacy_policy">Politique de Confidentialité et d'utilisation des Cookies</a>
+        </div>
+    </div>
+    <script src="js/loginscript.js"></script>
+</body>
+</html>

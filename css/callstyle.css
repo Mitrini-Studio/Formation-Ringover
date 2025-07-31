@@ -1,0 +1,428 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f3f9fd; /* Lighter background for the main body */
+    color: #333;
+}
+
+/* Sidebar Wrapper - This is now the main container for the left side, transparent */
+.sidebar-wrapper {
+    width: 100px; /* Adjust wrapper width to accommodate padding and rounded corners */
+    padding: 15px 0; /* Add vertical padding for the wrapper */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+/* Sidebar Content Container - The white, rounded box */
+.sidebar {
+    width: 70px; /* Adjust sidebar width to be narrower */
+    background: white; /* White background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 10px; /* Adjust padding inside the white container */
+    flex-grow: 1; /* Allows it to fill the height of the wrapper */
+}
+
+.logo img {
+    width: 40px;
+    margin-bottom: 20px;
+}
+
+.nav-icons {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-icons .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px; /* Smaller clickable area for icons */
+    height: 45px;
+    margin: 8px 0; /* Adjust spacing */
+    font-size: 22px;
+    cursor: pointer;
+    color: #999;
+    border-radius: 8px;
+}
+
+.nav-icons .icon img {
+    width: 22px; /* Adjust icon image size */
+    height: 22px;
+    vertical-align: middle;
+}
+
+.nav-icons .icon.active {
+    background: #c3e0ec; /* Light blue background for active */
+}
+
+.bottom-user img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Main Content */
+.main {
+    flex-grow: 1;
+    padding: 20px 30px;
+    width: calc(100% - 100px); /* Account for sidebar-wrapper width */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stats-toggle button {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-icon img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    gap: 30px;
+}
+
+.dialer-section {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    background: #f3f9fd;
+}
+
+/* Dial Pad */
+.dial-pad {
+    width: 280px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-with-flag {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+}
+
+.input-with-flag .flag-icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.dial-pad input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 1.1em;
+    background-color: transparent;
+}
+
+.dial-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+}
+
+.dial-buttons button {
+    padding: 15px 0;
+    font-weight: 600;
+    border: none;
+    background: #f0f4f7;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dial-buttons button:hover {
+    background: #e0e5e9;
+}
+
+.dial-buttons button .sub-text {
+    font-size: 0.7em;
+    color: #777;
+    margin-top: 3px;
+}
+
+.call-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.action-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+.action-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.mic-btn,
+.sleep-btn {
+    background: #e3f3fa;
+}
+
+.call-btn {
+    background: #009688;
+    color: white;
+}
+
+.number-display-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number-display-wrapper .line {
+    width: 80%;
+    height: 2px;
+    background-color: #f44336;
+    margin-bottom: 15px;
+}
+
+.number-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #009688;
+    font-size: 1.1em;
+}
+
+.number-display .flag-icon-small {
+    font-size: 1em;
+}
+
+/* Power Dialer Section */
+.power-dialer {
+    flex-grow: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.power-dialer h2 {
+    font-size: 1.6em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.power-dialer .subtitle {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.power-dialer h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.upload-box {
+    border: 2px dashed #bbdefb;
+    padding: 30px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 12px;
+    background: #fdfefe;
+}
+
+.upload-icon-container {
+    width: 70px;
+    height: 70px;
+    background-color: #e1f5fe;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+}
+
+.upload-box .cloud-icon {
+    font-size: 35px;
+    color: #2196f3;
+}
+
+.upload-box .upload-main-text {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.upload-box .upload-sub-text {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.add-file-btn {
+    padding: 10px 20px;
+    background: #007c99;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.add-file-btn img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.add-file-btn:hover {
+    background: #006075;
+}
+
+.manual-add {
+    color: #007c99;
+    margin-top: 12px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.campaigns h3 {
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.empty-campaign {
+    text-align: center;
+    color: #777;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Corrected: Styling for the single, static rocket icon */
+.static-rocket-icon {
+    width: 60px; /* Adjust size as needed */
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+/* Removed animation and cogwheel related styles */
+/*
+.rocket-container { ... }
+.cog { ... }
+.cog-1 { ... }
+.cog-2 { ... }
+@keyframes rotate { ... }
+*/
+
+.empty-campaign p {
+    font-size: 0.9em;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+/* Right Side Avatars */
+.right-avatars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 50px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar colors */
+.blue-bg { background: #2196f3; }
+.purple-bg { background: #9c27b0; }
+.green-bg { background: #4caf50; }
+.light-blue-bg { background: #03a9f4; }
+.orange-bg { background: #ff9800; }
+.red-bg { background: #f44336; }

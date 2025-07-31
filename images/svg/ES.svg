@@ -1,0 +1,21 @@
+<svg id="ES.gif" xmlns="http://www.w3.org/2000/svg" width="23.996" height="16.112" viewBox="0 0 70 47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffce54;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #ed5565;
+      }
+
+      .cls-3 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Rounded_Rectangle_7_copy" data-name="Rounded Rectangle 7 copy" class="cls-1" width="70" height="47" rx="6.364" ry="6.364"/>
+  <rect id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-2" width="70" height="10"/>
+  <rect id="Rectangle_1_copy_13" data-name="Rectangle 1 copy 13" class="cls-2" y="37" width="70" height="10"/>
+  <path class="cls-3" d="M1066.76,369.5a4.278,4.278,0,0,0-6.51,0,5.1,5.1,0,0,1-3.25-1.247v8.154c0.06,5.371,6.5,7.591,6.5,7.591s6.5-2.22,6.5-7.591v-8.154A5.06,5.06,0,0,1,1066.76,369.5Z" transform="translate(-1050 -352)"/>
+</svg>

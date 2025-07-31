@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Dialer</title>
+    <link rel="stylesheet" href="css/callstyle.css" />
+    </head>
+
+<body>
+
+    <div class="sidebar-wrapper">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="images/png/favicon.png" alt="Logo" />
+            </div>
+            <div class="nav-icons">
+                <span class="icon"><img src="images/jpg/logs.jpg" alt="Logs" /></span>
+                <span class="icon"><img src="images/jpg/groups.jpg" alt="Groups" /></span>
+                <span class="icon"><img src="images/jpg/messages.jpg" alt="Messages" /></span>
+                <span class="icon"><img src="images/jpg/stats.jpg" alt="Stats" /></span>
+                <span class="icon active">
+                    <img src="images/jpg/dialls.jpg" alt="Dial" />
+                </span>
+                <span class="icon"><img src="images/jpg/notifs.jpg" alt="Notifications" /></span>
+                <span class="icon"><img src="images/jpg/settings.jpg" alt="Settings" /></span>
+            </div>
+            <div class="bottom-user">
+                <img src="images/jpg/profil.jpg" alt="User" />
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="top-bar">
+            <div class="stats-toggle">
+                <button>Vos stats du jour ⌄</button>
+            </div>
+            <div class="search-icon">
+                <img src="https://via.placeholder.com/24/cccccc?text=🔍" alt="Search" />
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="dialer-section">
+
+                <div class="dial-pad">
+                    <div class="input-with-flag">
+                        <span class="flag-icon">🇫🇷</span>
+                        <input type="text" placeholder="Entrez un nom ou un numéro" />
+                    </div>
+
+                    <div class="dial-buttons">
+                        <button>1</button>
+                        <button>2 <span class="sub-text">abc</span></button>
+                        <button>3 <span class="sub-text">def</span></button>
+                        <button>4 <span class="sub-text">ghi</span></button>
+                        <button>5 <span class="sub-text">jkl</span></button>
+                        <button>6 <span class="sub-text">mno</span></button>
+                        <button>7 <span class="sub-text">pqrs</span></button>
+                        <button>8 <span class="sub-text">tuv</span></button>
+                        <button>9 <span class="sub-text">wxyz</span></button>
+                        <button>*</button>
+                        <button>0</button>
+                        <button>#</button>
+                    </div>
+
+                    <div class="call-actions">
+                        <button class="action-btn mic-btn">
+                            <img src="images/jpg/mic.jpg" alt="Mic" />
+                        </button>
+                        <button class="action-btn call-btn">
+                            <img src="images/jpg/call.jpg" alt="Call" />
+                        </button>
+                        <button class="action-btn sleep-btn">
+                            <img src="images/jpg/sleep.jpg" alt="Sleep" />
+                        </button>
+                    </div>
+
+                    <div class="number-display-wrapper">
+                        <div class="line"></div>
+                        <div class="number-display">
+                            <span class="flag-icon-small">🇫🇷</span>
+                            09 80 80 09 26
+                        </div>
+                    </div>
+                </div>
+
+                <div class="power-dialer">
+                    <h2>Power Dialer</h2>
+                    <p class="subtitle">Automatisez vos campagnes d’appels avec le dialer automatique Ringover et appelez sans interruption.</p>
+
+                    <h3>Votre campagne</h3>
+                    <div class="upload-box">
+                        <div class="upload-icon-container">
+                            <span class="cloud-icon">☁️</span>
+                        </div>
+                        <p class="upload-main-text"><strong>Ajouter des numéros de téléphone</strong></p>
+                        <p class="upload-sub-text">Glissez-déposez ici des fichiers .csv ou .txt</p>
+                        <button class="add-file-btn" onclick="uploadFile()">
+                            <img src="https://via.placeholder.com/16/FFFFFF?text=+" alt="Add File" /> Ajouter un fichier
+                        </button>
+                        <p class="manual-add">ou ajouter manuellement</p>
+                    </div>
+
+                    <div class="campaigns">
+                        <h3>Campagnes partagées</h3>
+                        <div class="empty-campaign">
+                            <img src="images/jpg/rocket.jpg" alt="Rocket" class="static-rocket-icon" />
+                            <p>Aucune campagne partagée n’a été trouvée. Renseignez-vous auprès de votre superviseur ou administrateur.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right-avatars">
+                <div class="avatar blue-bg">ER</div>
+                <div class="avatar purple-bg">AD</div>
+                <div class="avatar green-bg">AA</div>
+                <div class="avatar light-blue-bg">CR</div>
+                <div class="avatar orange-bg">TN</div>
+                <div class="avatar red-bg">AD</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/callscript.js"></script>
+</body>
+
+</html>
